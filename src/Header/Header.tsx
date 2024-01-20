@@ -1,9 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
-import "@fontsource/roboto";
 import { grey, purple } from "@mui/material/colors";
 import Image from "next/image";
-import { WidthFull } from "@mui/icons-material";
 
 const Header = (): JSX.Element => {
   return (
