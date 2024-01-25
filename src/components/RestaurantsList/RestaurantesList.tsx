@@ -77,7 +77,9 @@ const RestaurantsList = () => {
       >
         {restaurants?.length > 0 &&
           restaurants?.map((restaurant) => (
-            <RestaurantDetails restaurant={restaurant} />
+            <div key={restaurant.name}>
+              <RestaurantDetails restaurant={restaurant} />
+            </div>
           ))}
       </Grid>
     </div>
