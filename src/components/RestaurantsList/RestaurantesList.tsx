@@ -22,9 +22,11 @@ const RestaurantsList = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const url = process.env.REACT_APP_API_URL as string;
+
   const restaurantsList = useCallback(async () => {
     setIsLoading(true);
-    const result = await getAllItems("http://localhost:4000/restaurants");
+    const result = await getAllItems(`${url}restaurants`);
 
     if (result) {
       setErrorMessage("");
@@ -76,10 +78,8 @@ const RestaurantsList = () => {
         }}
       >
         {restaurants?.length > 0 &&
-          restaurants?.map((restaurant) => (
-            <div key={restaurant.name}>
-              <RestaurantDetails restaurant={restaurant} />
-            </div>
+          restaurants?.map((restaurant, index) => (
+            <RestaurantDetails restaurant={restaurant} key={index} />
           ))}
       </Grid>
     </div>
