@@ -1,8 +1,8 @@
 "use client";
-import { Box } from "@mui/material";
 import React from "react";
-import { grey, purple } from "@mui/material/colors";
 import Image from "next/image";
+import { Box } from "@mui/material";
+import { grey } from "@mui/material/colors";
 
 const Header = (): JSX.Element => {
   return (

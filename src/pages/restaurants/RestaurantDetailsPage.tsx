@@ -1,11 +1,10 @@
 "use client";
 
-import RestaurantDetails from "@/components/RestaurantDetails/RestaurantDetails";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import useApi from "@/hooks/useApi";
 import Restaurant from "@/interfaces/interfaces";
-import { useParams } from "react-router-dom";
-
-import { useEffect, useState } from "react";
+import RestaurantDetails from "@/components/RestaurantDetails/RestaurantDetails";
 
 const RestaurantDetailsPage = (): JSX.Element => {
   const [restaurant, setRestaurant] = useState({} as Restaurant);

@@ -1,14 +1,12 @@
 "use client";
+import React, { CSSProperties, useCallback, useEffect, useState } from "react";
 import useApi from "@/hooks/useApi";
+import { ClipLoader } from "react-spinners";
 import Restaurant from "@/interfaces/interfaces";
 import { Alert, Grid } from "@mui/material";
-
 import { purple } from "@mui/material/colors";
-import React, { CSSProperties, useCallback, useEffect, useState } from "react";
-import { ClipLoader } from "react-spinners";
 import RestaurantDetails from "@/components/RestaurantDetails/RestaurantDetails";
 
-const apiURL = process.env.REACT_APP_API_URL as string;
 const override: CSSProperties = {
   display: "block",
   margin: "0 auto",
