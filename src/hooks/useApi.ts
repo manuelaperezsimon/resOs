@@ -1,6 +1,6 @@
-import Restaurant from "@/interfaces/interfaces";
 import axios from "axios";
 import { useCallback } from "react";
+import Restaurant from "@/interfaces/interfaces";
 
 interface Api {
   getAllItems: (url: string) => Promise<Restaurant[]>;

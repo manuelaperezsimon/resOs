@@ -1,13 +1,12 @@
 "use client";
 import React, { CSSProperties, useCallback, useState } from "react";
-import { Alert, Box, Button, Input } from "@mui/material";
-import { purple } from "@mui/material/colors";
 import useApi from "@/hooks/useApi";
-
 import Restaurant from "@/interfaces/interfaces";
 import RestaurantDetails from "../RestaurantDetails/RestaurantDetails";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
+import { Alert, Box, Button, Input } from "@mui/material";
+import { purple } from "@mui/material/colors";
 
 const override: CSSProperties = {
   display: "block",

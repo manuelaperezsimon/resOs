@@ -1,8 +1,8 @@
 "use client";
 import Header from "@/components/Header/Header";
 import Search from "@/components/Search/Search";
-import RestaurantsListPage from "@/pages/restaurants/RestaurantsPageList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import RestaurantsListPage from "@/pages/restaurants/RestaurantsPageList";
 
 export default function Home() {
   return (

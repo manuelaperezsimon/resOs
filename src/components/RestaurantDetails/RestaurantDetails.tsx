@@ -1,4 +1,6 @@
 "use client";
+
+import React from "react";
 import {
   Card,
   CardContent,
@@ -7,8 +9,6 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import React from "react";
-
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import FoodBankOutlinedIcon from "@mui/icons-material/FoodBankOutlined";
