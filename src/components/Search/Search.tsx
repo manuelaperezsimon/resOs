@@ -29,6 +29,7 @@ const Search = (): JSX.Element => {
   const handleChange = (e) => setInputValue(e.target.value);
 
   const restaurantByName = useCallback(async () => {
+    setErrorMessage("");
     setIsLoading(true);
 
     const result = await getRestaurantByName(
@@ -36,7 +37,6 @@ const Search = (): JSX.Element => {
     );
 
     if (result) {
-      setErrorMessage("");
       setRestaurant(result as Restaurant);
       navigate(`/restaurants/${inputValue}`);
     } else {
@@ -68,7 +68,7 @@ const Search = (): JSX.Element => {
           Search
         </Button>
       </Box>
-      {Object.keys(restaurant).length > 0 && (
+      {restaurant !== null && (
         <Box
           sx={{
             paddingLeft: 6,
@@ -98,7 +98,6 @@ const Search = (): JSX.Element => {
           loading={isLoading}
           cssOverride={override}
           size={100}
-          aria-label="Loading Spinner"
           data-testid="loader"
         />
       )}
