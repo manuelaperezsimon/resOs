@@ -1,4 +1,5 @@
 interface Restaurant {
+  id: string;
   name: string;
   address: string;
   tags: string[];
