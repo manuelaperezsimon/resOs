@@ -76,8 +76,8 @@ const RestaurantsList = () => {
         }}
       >
         {restaurants?.length > 0 &&
-          restaurants?.map((restaurant, index) => (
-            <RestaurantDetails restaurant={restaurant} key={index} />
+          restaurants?.map((restaurant) => (
+            <RestaurantDetails restaurant={restaurant} key={restaurant.id} />
           ))}
       </Grid>
     </div>
