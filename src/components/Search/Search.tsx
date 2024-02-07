@@ -21,7 +21,7 @@ const Search = (): JSX.Element => {
   const [inputValue, setInputValue] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [restaurant, setRestaurant] = useState({} as Restaurant);
+  const [restaurant, setRestaurant] = useState<Restaurant | null>(null);
 
   const { getRestaurantByName } = useApi();
   const navigate = useNavigate();
@@ -68,7 +68,7 @@ const Search = (): JSX.Element => {
           Search
         </Button>
       </Box>
-      {restaurant !== null && (
+      {restaurant !== null && inputValue && (
         <Box
           sx={{
             paddingLeft: 6,
@@ -76,7 +76,10 @@ const Search = (): JSX.Element => {
             marginTop: 5,
           }}
         >
-          <RestaurantDetails restaurant={restaurant} width="35%" />
+          <RestaurantDetails
+            restaurant={restaurant as Restaurant}
+            width="35%"
+          />
         </Box>
       )}
 
